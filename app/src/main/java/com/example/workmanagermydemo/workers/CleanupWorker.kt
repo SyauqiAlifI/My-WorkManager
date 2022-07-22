@@ -8,12 +8,15 @@ import com.example.workmanagermydemo.OUTPUT_PATH
 import java.io.File
 
 private const val TAG = "CleanupWorker"
+
 class CleanupWorker(ctx: Context, params: WorkerParameters) : Worker(ctx, params) {
 
     override fun doWork(): Result {
-        // Makes a notification when the work starts and slows down the work so that
-        // it's easier to see each WorkRequest start, even on emulated devices
+
+        /* Membuat notif saat work dimulai dan memperlambat work sehingga
+           akan lebih mudah untuk dilihat prosesnya */
         makeStatusNotification("Cleaning up old temporary files", applicationContext)
+
         sleep()
 
         return try {

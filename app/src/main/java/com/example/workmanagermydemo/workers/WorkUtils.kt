@@ -21,6 +21,8 @@ import java.io.FileOutputStream
 import java.io.IOException
 import java.util.*
 
+private const val TAG = "WorkerUtils"
+
 fun makeStatusNotification(message: String, context: Context) {
 
     // Membuat channel jika diperlukan
@@ -52,8 +54,6 @@ fun makeStatusNotification(message: String, context: Context) {
     // Menampilkan Notifikasi
     NotificationManagerCompat.from(context).notify(NOTIFICATION_ID, builder.build())
 }
-
-private const val TAG = "WorkerUtils"
 
 fun sleep() {
 
@@ -110,7 +110,7 @@ fun writeBitmapToFile(applicationContext: Context, bitmap: Bitmap): Uri {
     val outputDir = File(applicationContext.filesDir, OUTPUT_PATH)
 
     if (!outputDir.exists()) {
-        outputDir.mkdirs() // should succeed
+        outputDir.mkdirs() // Harusnya success
     }
 
     val outputFile = File(outputDir, name)
@@ -119,7 +119,7 @@ fun writeBitmapToFile(applicationContext: Context, bitmap: Bitmap): Uri {
     try {
 
         out = FileOutputStream(outputFile)
-        bitmap.compress(Bitmap.CompressFormat.PNG, 0 /* ignored for PNG */, out)
+        bitmap.compress(Bitmap.CompressFormat.PNG, 0 /* diabaikan untuk PNG */, out)
 
     } finally {
 
