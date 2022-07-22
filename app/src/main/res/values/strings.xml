@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Blur Image</string>
+
+    <!-- Titles -->
+    <string name="blur_title">Pilih salah satu</string>
+
+    <!-- Buttons -->
+    <string name="select_image">Select Image</string>
+    <string name="go">Go</string>
+    <string name="see_file">See File</string>
+
+    <!-- Content descriptions -->
+    <string name="description_image">The image to blur and save.</string>
+
+    <!-- Blur levels -->
+    <string name="blur_lv_1">Sedikit Blur</string>
+    <string name="blur_lv_2">Rada Blur</string>
+    <string name="blur_lv_3">Si Paling Blur</string>
+    <string name="cancel_work">Cancel Work</string>
+
+    <!-- Messages -->
+    <string name="set_permissions_in_settings">Go to Settings -> Apps and Notifications ->
+        WorkManager Demo -> App Permissions and grant access to Storage.</string>
+</resources>
